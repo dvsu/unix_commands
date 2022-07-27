@@ -168,7 +168,16 @@ Most commonly used Unix commands
    Assume you are looking for a word _porta_ in a text file _words.txt_ contains the following words.
 
    ```none
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra metus nec est imperdiet venenatis. Nam augue libero, consequat vel luctus id, ultricies eu elit. Sed scelerisque porta metus, et lacinia ipsum posuere et. Quisque risus velit, pretium quis scelerisque sed, sodales convallis mi.
+   Lorem ipsum dolor sit amet,
+   consectetur adipiscing elit.
+   Nunc viverra metus nec est imperdiet venenatis.
+   Nam augue libero, consequat vel luctus id,
+   ultricies eu elit.
+   Sed scelerisque porta metus,
+   et lacinia ipsum posuere et.
+   Quisque risus velit,
+   pretium quis scelerisque sed,
+   sodales convallis mi.
    ```
 
    ```bash
@@ -178,9 +187,17 @@ Most commonly used Unix commands
    **_Output_**
 
    ```none
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra metus nec est imperdiet venenatis. Nam augue libero, consequat vel luctus id, ultricies eu elit. Sed scelerisque porta
-                                                               -----
-   metus, et lacinia ipsum posuere et. Quisque risus velit, pretium quis scelerisque sed, sodales convallis mi.
+   Lorem ipsum dolor sit amet,
+   consectetur adipiscing elit.
+   Nunc viverra metus nec est imperdiet venenatis.
+   Nam augue libero, consequat vel luctus id,
+   ultricies eu elit.
+   Sed scelerisque porta metus,
+                   -----
+   et lacinia ipsum posuere et.
+   Quisque risus velit,
+   pretium quis scelerisque sed,
+   sodales convallis mi.
    ```
 
 2. Search for a keyword in many files (recursively)
