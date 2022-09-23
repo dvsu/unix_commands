@@ -303,3 +303,65 @@ Most commonly used Unix commands
    **_Note_**
 
    It prints the modified content but does not modify the original content in the file.
+
+## `ssh`
+
+## `ssh-copy-id`
+
+Copy and install public key as authorized key on remote machine/ server
+
+**_Command_**
+
+```none
+ssh-copy-id -i ~/.ssh/[public_key] [username]@[remote_host]
+```
+
+**_Example_**
+
+```none
+ssh-copy-id -i ~/.ssh/id_ed25519.pub bob@123.45.67.89
+```
+
+**_Note_**
+
+This operation requires regular SSH access with password
+
+**_Tips_**
+
+Once the public key has been installed on remote machine, you can access it remotely using private key.
+
+1. Create `~/.ssh/config` file if it does not exist. Open the file and add the following snippet to the file
+
+   ```none
+   Host [any_name_you_like]
+     Hostname [hostname_or_ip]
+     User [username]
+     IdentityFile [/path/to/private_key]
+   ```
+
+   **_Example_**
+
+   ```none
+   Host my-server
+     Hostname 123.45.67.89
+     User bob
+     IdentityFile ~/.ssh/id_ed25519
+   ```
+
+   **_Note_**
+
+   Some private key may or may not contain file extension. If the generated private key has an extension name, it has to be included in the `IdentityFile`, such as `~/.ssh/my_key.pem`
+
+2. Finally, to access the remote machine
+
+   **_Command_**
+
+   ```none
+   ssh [chosen_hostname]
+   ```
+
+   **_Example_**
+
+   ```none
+   ssh my-server
+   ```
